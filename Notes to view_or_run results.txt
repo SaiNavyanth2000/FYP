@@ -1,0 +1,31 @@
+The folder structure of this project is:
+
+- FYP (Parent Folder)
+	- code
+		- backend
+		- frontend
+		- MachineLearning
+		- portfolio_optimization
+	- data
+		- models
+		- normalizers
+		- sentiment data
+
+
+You don't have to run any of the codes to visualize our results.
+The frontend and the backend have been deployed online to cloud servers.
+
+The link to the frontend is:
+https://stock-price-prediction.netlify.app/
+
+The frontend sends API requests to the API hosted in backend:
+https://fyp-backend-sai.herokuapp.com/predict
+
+All the model training has been done in the file "code/MachineLearning/model_training/ML Process.ipynb"
+
+The file "code/backend/batch_file.py" is developed by my groupmate to get historical sentiment of the past 7 days.
+So, this file needs to be run everyday in the morning, and deployed it to Heroku.
+(PS: I am running this file everyday).
+
+If there are any queries regarding the implementation, please send an email to:
+svobbilis2-c@my.cityu.edu.hk
