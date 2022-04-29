@@ -14,7 +14,6 @@ CORS(app, resources={r'/*': {'origins': '*'}},CORS_SUPPORTS_CREDENTIALS = True)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
-
 @app.route("/predict", methods=["POST","GET"])
 def submitData():
 
@@ -32,6 +31,8 @@ def submitData():
     
             tick   = data_dict['ticker']
             model_type = data_dict['model_type']
+            print('model running............................')
+            gc.collect()
         except:
             tick = 'AAPL'
             model_type = 'lstm'
@@ -59,6 +60,8 @@ def submitData():
 
         # garbage collection https://www.geeksforgeeks.org/memory-leak-in-python-requests/
         gc.collect()   
+
+        print('model running complete.')
 
         return response_object    
 

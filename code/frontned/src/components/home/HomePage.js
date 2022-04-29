@@ -1,29 +1,15 @@
-import { useNavigate } from 'react-router-dom';
-import { Box, Typography, Select, MenuItem, Button } from '@mui/material';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Company from './Company';
-import { fontStyle } from '@mui/system';
+import { useNavigate } from "react-router-dom";
+import { Box, Typography, Select, MenuItem, Button } from "@mui/material";
+import React from "react";
+import { Link } from "react-router-dom";
+import Company from "./Company";
+import { fontStyle } from "@mui/system";
 
 function Home() {
-  // const [tick, setTick] = React.useState("");
-  // const [loading, setLoading] = React.useState(true);
-
-  // const handleChange = (event) => {
-  //   setTick(event.target.value);
-  //   setLoading(false);
-  // };
-
-  // let navigate = useNavigate();
-  // const handleSubmit = () => {
-  //   let path = "/predict";
-  //   navigate(path, { state: { ticker: tick } });
-  // };
-
   return (
     <div>
       <Box>
-        <h2 style={{ marginLeft: '50px' }}>
+        <h2 style={{ marginLeft: "50px" }}>
           List of stocks used for prediction:
         </h2>
         <Box
@@ -60,7 +46,7 @@ function Home() {
                 stock"
           ></Company>
 
-          <div style={{ marginLeft: '30px' }}></div>
+          <div style={{ marginLeft: "30px" }}></div>
 
           <Company
             name="Google"
@@ -73,7 +59,7 @@ function Home() {
         <Box marginLeft="50px">
           <h2>Portfolio Optimization</h2>
           <p>
-            Mone Carlo Simulation technique has been used to find a portfolio
+            Monte Carlo Simulation technique has been used to find a portfolio
             with the best sharpe ratio.
           </p>
           <p>
@@ -88,7 +74,7 @@ function Home() {
           </p>
           <img
             width="500px"
-            src={process.env.PUBLIC_URL + 'images/opt_portfolio.jpg'}
+            src={process.env.PUBLIC_URL + "images/opt_portfolio.jpg"}
           />
           <p>While creating the portfolio, these weights are taken in mind.</p>
 
@@ -101,10 +87,10 @@ function Home() {
               <h3>Buy and Sell strategy</h3>
 
               <h4>Portfolio Results:</h4>
-              <p style={{ fontSize: '25px', fontStyle: 'normal' }}>
+              <p style={{ fontSize: "25px", fontStyle: "normal" }}>
                 Sharpe Ratio: <span>1.12</span>
               </p>
-              <p style={{ fontSize: '25px', fontStyle: 'normal' }}>
+              <p style={{ fontSize: "25px", fontStyle: "normal" }}>
                 Return: <span>29.5%</span>
               </p>
             </Box>
@@ -112,10 +98,10 @@ function Home() {
               <h3>Univariate LSTM Model</h3>
 
               <h4>Portfolio Results:</h4>
-              <p style={{ fontSize: '25px', fontStyle: 'normal' }}>
+              <p style={{ fontSize: "25px", fontStyle: "normal" }}>
                 Sharpe Ratio: <span>1.32</span>
               </p>
-              <p style={{ fontSize: '25px', fontStyle: 'normal' }}>
+              <p style={{ fontSize: "25px", fontStyle: "normal" }}>
                 Return: <span>46.2%</span>
               </p>
             </Box>
@@ -123,20 +109,20 @@ function Home() {
               <h3>Multivariate LSTM Model</h3>
 
               <h4>Portfolio Results:</h4>
-              <p style={{ fontSize: '25px', fontStyle: 'normal' }}>
+              <p style={{ fontSize: "25px", fontStyle: "normal" }}>
                 Sharpe Ratio: <span>2.6</span>
               </p>
-              <p style={{ fontSize: '25px', fontStyle: 'normal' }}>
+              <p style={{ fontSize: "25px", fontStyle: "normal" }}>
                 Return: <span>69.9%</span>
               </p>
             </Box>
             <Box width="25%">
               <h3>Artificial Neural Network Model</h3>
               <h4>Portfolio Results:</h4>
-              <p style={{ fontSize: '25px', fontStyle: 'normal' }}>
+              <p style={{ fontSize: "25px", fontStyle: "normal" }}>
                 Sharpe Ratio: <span>5.2</span>
               </p>
-              <p style={{ fontSize: '25px', fontStyle: 'normal' }}>
+              <p style={{ fontSize: "25px", fontStyle: "normal" }}>
                 Return: <span>193.5%</span>
               </p>
             </Box>
